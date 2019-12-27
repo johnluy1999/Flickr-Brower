@@ -59,7 +59,8 @@ public class Login extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //chuyen sang register frame
+                Intent intent = new Intent(Login.this,Register.class);
+                startActivity(intent);
             }
         });
     }
@@ -68,7 +69,6 @@ public class Login extends AppCompatActivity {
     private void validate (String username, String password){
 
         if ( (username.equals("admin")) && (password.equals("admin"))){
-            //chuyen sang main acctivity
             Intent intent = new Intent(Login.this,MainActivity.class);
             startActivity(intent);
         }
